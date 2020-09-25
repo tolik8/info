@@ -1,0 +1,246 @@
+object Form1: TForm1
+  Left = 819
+  Height = 600
+  Top = 245
+  Width = 800
+  Caption = 'Info v.1.0'
+  ClientHeight = 600
+  ClientWidth = 800
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.0.10.0'
+  object LabelComputerName: TLabel
+    Left = 216
+    Height = 25
+    Top = 16
+    Width = 134
+    Caption = 'ComputerName'
+    Font.Color = clBlue
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelDescription: TLabel
+    Left = 216
+    Height = 25
+    Top = 56
+    Width = 96
+    Caption = 'Description'
+    Font.Color = clBlue
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelUserName: TLabel
+    Left = 216
+    Height = 25
+    Top = 96
+    Width = 88
+    Caption = 'UserName'
+    Font.Color = clBlue
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelIpAddress: TLabel
+    Left = 216
+    Height = 25
+    Top = 136
+    Width = 83
+    Caption = 'IpAddress'
+    Font.Color = clBlue
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelMemory: TLabel
+    Left = 216
+    Height = 25
+    Top = 216
+    Width = 70
+    Caption = 'Memory'
+    Font.Color = clBlue
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelOS: TLabel
+    Left = 216
+    Height = 25
+    Top = 256
+    Width = 24
+    Caption = 'OS'
+    Font.Color = clBlue
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 25
+    Top = 16
+    Width = 139
+    Caption = 'Ім’я комп’ютера'
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 25
+    Top = 56
+    Width = 45
+    Caption = 'Опис'
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 25
+    Top = 96
+    Width = 146
+    Caption = 'Ім’я користувача'
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 25
+    Top = 136
+    Width = 81
+    Caption = 'IP адреса'
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 16
+    Height = 25
+    Top = 216
+    Width = 69
+    Caption = 'Пам’ять'
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 16
+    Height = 25
+    Top = 256
+    Width = 179
+    Caption = 'Операційна система'
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 16
+    Height = 25
+    Top = 176
+    Width = 88
+    Caption = 'Процесор'
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelCPU: TLabel
+    Left = 216
+    Height = 25
+    Top = 176
+    Width = 36
+    Caption = 'CPU'
+    Font.Color = clBlue
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 16
+    Height = 25
+    Top = 296
+    Width = 66
+    Caption = 'Кабінет'
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelCab: TLabel
+    Left = 216
+    Height = 25
+    Top = 296
+    Width = 33
+    Caption = 'Cab'
+    Font.Color = clBlue
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 16
+    Height = 25
+    Top = 336
+    Width = 94
+    Caption = 'IP телефон'
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 16
+    Height = 25
+    Top = 376
+    Width = 164
+    Caption = 'Інвентарні номери'
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelIpPhone: TLabel
+    Left = 216
+    Height = 25
+    Top = 336
+    Width = 70
+    Caption = 'IpPhone'
+    Font.Color = clBlue
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelInvNumbers: TLabel
+    Left = 216
+    Height = 25
+    Top = 376
+    Width = 102
+    Caption = 'InvNumbers'
+    Font.Color = clBlue
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 672
+    Height = 25
+    Top = 520
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object ZConnection: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=ON'
+    )
+    HostName = '10.19.19.100'
+    Port = 1521
+    Database = 'REGION19'
+    User = 'PIKALKA'
+    Password = 'p321'
+    Protocol = 'oracle'
+    Left = 400
+    Top = 16
+  end
+end
