@@ -3,244 +3,343 @@ object Form1: TForm1
   Height = 600
   Top = 245
   Width = 800
-  Caption = 'Info v.1.0'
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Info v1.0'
   ClientHeight = 600
   ClientWidth = 800
+  Constraints.MinHeight = 600
+  Constraints.MinWidth = 800
   OnCreate = FormCreate
   Position = poScreenCenter
   LCLVersion = '2.0.10.0'
-  object LabelComputerName: TLabel
-    Left = 216
-    Height = 25
+  object StatusBar: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 577
+    Width = 800
+    Panels = <>
+    SimpleText = 'Development by Turkevych Anatoliy'
+  end
+  object PageControl1: TPageControl
+    Left = 16
+    Height = 552
     Top = 16
-    Width = 134
-    Caption = 'ComputerName'
-    Font.Color = clBlue
-    Font.Height = -19
-    ParentColor = False
+    Width = 768
+    ActivePage = TabSheet1
+    Font.Height = -16
     ParentFont = False
+    TabIndex = 0
+    TabOrder = 1
+    object TabSheet1: TTabSheet
+      Caption = 'Основна інформація'
+      ClientHeight = 518
+      ClientWidth = 760
+      object Label1: TLabel
+        Left = 16
+        Height = 25
+        Top = 16
+        Width = 139
+        Caption = 'Ім’я комп’ютера'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label2: TLabel
+        Left = 16
+        Height = 25
+        Hint = 'Кабінет та П.І.Б.'
+        Top = 57
+        Width = 152
+        Caption = 'Опис комп’ютера'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object Label3: TLabel
+        Left = 16
+        Height = 25
+        Hint = 'Логін в комп’ютер'
+        Top = 98
+        Width = 134
+        Caption = 'Логін в мережу'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object Label4: TLabel
+        Left = 16
+        Height = 25
+        Top = 139
+        Width = 81
+        Caption = 'IP адреса'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+      end
+      object EditComputerName: TEdit
+        Left = 248
+        Height = 29
+        Top = 12
+        Width = 232
+        Font.Height = -16
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 0
+      end
+      object EditDescription: TEdit
+        Left = 248
+        Height = 29
+        Top = 53
+        Width = 448
+        Font.Height = -16
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 1
+      end
+      object EditUserName: TEdit
+        Left = 248
+        Height = 29
+        Top = 94
+        Width = 232
+        Font.Height = -16
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 2
+      end
+      object EditIpAddress: TEdit
+        Left = 248
+        Height = 29
+        Top = 135
+        Width = 136
+        Font.Height = -16
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 3
+      end
+      object Panel1: TPanel
+        Left = 10
+        Height = 298
+        Top = 176
+        Width = 738
+        BorderStyle = bsSingle
+        Caption = 'Panel1'
+        ClientHeight = 294
+        ClientWidth = 734
+        ParentColor = False
+        TabOrder = 4
+        object Label8: TLabel
+          Left = 16
+          Height = 25
+          Top = 52
+          Width = 66
+          Caption = 'Кабінет'
+          Font.Height = -19
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label9: TLabel
+          Left = 16
+          Height = 25
+          Top = 172
+          Width = 94
+          Caption = 'IP телефон'
+          Font.Height = -19
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label10: TLabel
+          Left = 16
+          Height = 25
+          Top = 212
+          Width = 164
+          Caption = 'Інвентарні номери'
+          Font.Height = -19
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label11: TLabel
+          Left = 16
+          Height = 25
+          Hint = 'Також це логін в інші центральні ресурси, такі як УДО, Архів звітності та інші.'#13#10'А ще цей логін використовується для входу в свій Профіль (Перелік веб-ресурсів) та в програмі Bimoid.'
+          Top = 132
+          Width = 218
+          Caption = 'Логін в Податковий блок'
+          Font.Height = -19
+          ParentColor = False
+          ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
+        end
+        object Label12: TLabel
+          Left = 16
+          Height = 25
+          Top = 92
+          Width = 42
+          Caption = 'П.І.Б.'
+          Font.Height = -19
+          ParentColor = False
+          ParentFont = False
+        end
+        object EditCabinet: TEdit
+          Left = 248
+          Height = 29
+          Top = 48
+          Width = 80
+          Font.Height = -16
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 0
+        end
+        object EditIpPhone: TEdit
+          Left = 248
+          Height = 29
+          Top = 168
+          Width = 80
+          Font.Height = -16
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 1
+        end
+        object EditInvNumbers: TEdit
+          Left = 248
+          Height = 29
+          Top = 208
+          Width = 448
+          Font.Height = -16
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 2
+        end
+        object EditTaxBlockLogin: TEdit
+          Left = 248
+          Height = 29
+          Top = 128
+          Width = 232
+          Font.Height = -16
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 3
+        end
+        object EditFIO: TEdit
+          Left = 248
+          Height = 29
+          Top = 88
+          Width = 448
+          Font.Height = -16
+          ParentFont = False
+          ReadOnly = True
+          TabOrder = 4
+        end
+        object ButtonGetData: TButton
+          Left = 16
+          Height = 25
+          Top = 12
+          Width = 256
+          Caption = 'Отримати дані  з бази даних'
+          OnClick = ButtonGetDataClick
+          TabOrder = 5
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Додаткова'
+      ClientHeight = 518
+      ClientWidth = 760
+      object Label7: TLabel
+        Left = 16
+        Height = 25
+        Top = 20
+        Width = 88
+        Caption = 'Процесор'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label5: TLabel
+        Left = 16
+        Height = 25
+        Top = 56
+        Width = 69
+        Caption = 'Пам’ять'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label6: TLabel
+        Left = 16
+        Height = 25
+        Top = 96
+        Width = 179
+        Caption = 'Операційна система'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+      end
+      object EditCPU: TEdit
+        Left = 216
+        Height = 29
+        Top = 16
+        Width = 448
+        Font.Height = -16
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 0
+      end
+      object EditMemory: TEdit
+        Left = 216
+        Height = 29
+        Top = 52
+        Width = 80
+        Font.Height = -16
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 1
+      end
+      object EditOS: TEdit
+        Left = 216
+        Height = 29
+        Top = 92
+        Width = 448
+        Font.Height = -16
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 2
+      end
+      object Label13: TLabel
+        Left = 16
+        Height = 25
+        Hint = 'Роздільна здатність монітора'
+        Top = 136
+        Width = 170
+        Caption = 'Роздільна здатність'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object EditResolution: TEdit
+        Left = 216
+        Height = 29
+        Top = 132
+        Width = 152
+        Font.Height = -16
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 3
+      end
+    end
   end
-  object LabelDescription: TLabel
-    Left = 216
-    Height = 25
-    Top = 56
-    Width = 96
-    Caption = 'Description'
-    Font.Color = clBlue
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object LabelUserName: TLabel
-    Left = 216
-    Height = 25
-    Top = 96
-    Width = 88
-    Caption = 'UserName'
-    Font.Color = clBlue
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object LabelIpAddress: TLabel
-    Left = 216
-    Height = 25
-    Top = 136
-    Width = 83
-    Caption = 'IpAddress'
-    Font.Color = clBlue
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object LabelMemory: TLabel
-    Left = 216
-    Height = 25
-    Top = 216
-    Width = 70
-    Caption = 'Memory'
-    Font.Color = clBlue
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object LabelOS: TLabel
-    Left = 216
-    Height = 25
-    Top = 256
-    Width = 24
-    Caption = 'OS'
-    Font.Color = clBlue
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label1: TLabel
-    Left = 16
-    Height = 25
-    Top = 16
-    Width = 139
-    Caption = 'Ім’я комп’ютера'
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label2: TLabel
-    Left = 16
-    Height = 25
-    Top = 56
-    Width = 45
-    Caption = 'Опис'
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label3: TLabel
-    Left = 16
-    Height = 25
-    Top = 96
-    Width = 146
-    Caption = 'Ім’я користувача'
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label4: TLabel
-    Left = 16
-    Height = 25
-    Top = 136
-    Width = 81
-    Caption = 'IP адреса'
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label5: TLabel
-    Left = 16
-    Height = 25
-    Top = 216
-    Width = 69
-    Caption = 'Пам’ять'
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label6: TLabel
-    Left = 16
-    Height = 25
-    Top = 256
-    Width = 179
-    Caption = 'Операційна система'
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label7: TLabel
-    Left = 16
-    Height = 25
-    Top = 176
-    Width = 88
-    Caption = 'Процесор'
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object LabelCPU: TLabel
-    Left = 216
-    Height = 25
-    Top = 176
-    Width = 36
-    Caption = 'CPU'
-    Font.Color = clBlue
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label8: TLabel
-    Left = 16
-    Height = 25
-    Top = 296
-    Width = 66
-    Caption = 'Кабінет'
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object LabelCab: TLabel
-    Left = 216
-    Height = 25
-    Top = 296
-    Width = 33
-    Caption = 'Cab'
-    Font.Color = clBlue
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label9: TLabel
-    Left = 16
-    Height = 25
-    Top = 336
-    Width = 94
-    Caption = 'IP телефон'
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label10: TLabel
-    Left = 16
-    Height = 25
-    Top = 376
-    Width = 164
-    Caption = 'Інвентарні номери'
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object LabelIpPhone: TLabel
-    Left = 216
-    Height = 25
-    Top = 336
-    Width = 70
-    Caption = 'IpPhone'
-    Font.Color = clBlue
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object LabelInvNumbers: TLabel
-    Left = 216
-    Height = 25
-    Top = 376
-    Width = 102
-    Caption = 'InvNumbers'
-    Font.Color = clBlue
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-  end
-  object Button1: TButton
-    Left = 672
-    Height = 25
-    Top = 520
-    Width = 75
-    Caption = 'Button1'
-    OnClick = Button1Click
-    TabOrder = 0
-  end
-  object ZConnection: TZConnection
-    ControlsCodePage = cCP_UTF8
-    AutoEncodeStrings = True
-    Properties.Strings = (
-      'AutoEncodeStrings=ON'
-    )
-    HostName = '10.19.19.100'
-    Port = 1521
-    Database = 'REGION19'
-    User = 'PIKALKA'
-    Password = 'p321'
-    Protocol = 'oracle'
-    Left = 400
-    Top = 16
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 3000
+    OnTimer = Timer1Timer
+    Left = 312
+    Top = 232
   end
 end

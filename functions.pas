@@ -5,7 +5,7 @@ unit functions;
 interface
 
 uses
-  Classes, SysUtils, Windows, Registry, Dialogs;
+  Classes, SysUtils, Windows, Registry, Math, USock;
 
 type
     MEMORYSTATUSEX = record
@@ -20,26 +20,32 @@ type
     ullAvailExtendedVirtual: uint64;
   end;
 
-function GetRAM: Int64;
+function GetMemory: Double;
 function GetComputerNetDescription: String;
 function GetRegData(Key, Name: String): String;
 function GetEnvironment(Name: String): String;
 function GetOS: String;
 function GetProcessorInfo: String;
 function IsWindows64: Boolean;
+function GetIpAddress: String;
 
 function GlobalMemoryStatusEx(var Buffer: MEMORYSTATUSEX): Boolean;
   stdcall; external 'kernel32' Name 'GlobalMemoryStatusEx';
 
 implementation
 
-function GetRAM: Int64;
+function GetMemory: Double;
 var
   PhysRam: MEMORYSTATUSEX;
+  MemSize: Double;
 begin
   PhysRam.dwLength := SizeOf(PhysRam);
   GlobalMemoryStatusEx(PhysRam);
-  Result := PhysRam.ullTotalPhys;
+  MemSize := PhysRam.ullTotalPhys / 1024 / 1024 / 1024;
+  if MemSize < 1
+    then MemSize := RoundTo(MemSize, -1)
+    else MemSize := Round(MemSize);
+  Result := MemSize;
 end;
 
 function IsWindows64: Boolean;
@@ -59,6 +65,7 @@ function IsWindows64: Boolean;
     IsWow64Result: Windows.BOOL; // Result from IsWow64Process
     IsWow64Process: TIsWow64Process; // IsWow64Process fn reference
   begin
+    IsWow64Result := false;
     // Try to load required function from kernel32
     IsWow64Process := TIsWow64Process(Windows.GetProcAddress(
       Windows.GetModuleHandle('kernel32'), 'IsWow64Process'));
@@ -113,6 +120,15 @@ end;
 function GetEnvironment(Name: String): String;
 begin
   Result := GetRegData('SYSTEM\CurrentControlSet\Control\Session manager\Environment', Name);
+end;
+
+function GetIpAddress: String;
+var
+  ipAddress: String;
+begin
+  ipAddress := '';
+  EnumInterfaces(ipAddress);
+  Result := ipAddress;
 end;
 
 end.
