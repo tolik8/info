@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls,
   ExtCtrls, functions, fphttpclient, fpjson, jsonparser, UxTheme;
 
-const url = 'http://alisa.loc/';
+const url = 'http://10.19.19.121/';
 
 type
 
