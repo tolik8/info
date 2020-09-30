@@ -103,7 +103,7 @@ begin
   Timer1.Enabled := true;
   Application.ProcessMessages;
 
-  link := url + 'json/?comp=' + EditComputerName.Caption;
+  link := url + 'json/?pc=' + EditComputerName.Caption;
   rawJson := '';
 
   // Get the JSON data
