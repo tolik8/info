@@ -83,7 +83,7 @@ begin
   EditUserName.Caption := GetEnvironmentVariable('USERNAME');
   EditIpAddress.Caption := GetIpAddress;
   EditMemory.Caption := FloatToStr(GetMemory);
-  EditOS.Caption := GetOS;
+  EditOS.Caption := GetOS + 'x' + GetBit + GetOSVersion;
   EditCPU.Caption := GetProcessorInfo;
   EditResolution.Caption := IntToStr(Screen.Width) + 'x' + IntToStr(Screen.Height);
 end;

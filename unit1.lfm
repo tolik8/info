@@ -162,6 +162,7 @@ object Form1: TForm1
           Font.Height = -19
           ParentColor = False
           ParentFont = False
+          Visible = False
         end
         object Label11: TLabel
           Left = 16
@@ -215,6 +216,7 @@ object Form1: TForm1
           ParentFont = False
           ReadOnly = True
           TabOrder = 2
+          Visible = False
         end
         object EditTaxBlockLogin: TEdit
           Left = 248
