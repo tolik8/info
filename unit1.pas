@@ -74,6 +74,9 @@ end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
+  Form1.Caption := 'Info v1.0';
+  StatusBar.SimpleText := 'Build 2020-10-05 Development by Turkevych Anatoliy';
+
   FixPageControl(PageControl1);
   TabSheet1.Color:= TColor($000BD7D1);
   TabSheet2.Color:= TColor($000BD7D1);
