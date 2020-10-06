@@ -75,7 +75,7 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   Form1.Caption := 'Info v1.0';
-  StatusBar.SimpleText := 'Build 2020-10-05 Development by Turkevych Anatoliy';
+  StatusBar.SimpleText := 'Build 2020-10-06 Development by Turkevych Anatoliy';
 
   FixPageControl(PageControl1);
   TabSheet1.Color:= TColor($000BD7D1);
@@ -86,7 +86,7 @@ begin
   EditUserName.Caption := GetEnvironmentVariable('USERNAME');
   EditIpAddress.Caption := GetIpAddress;
   EditMemory.Caption := FloatToStr(GetMemory);
-  EditOS.Caption := GetOS + 'x' + GetBit + GetOSVersion;
+  EditOS.Caption := GetOS + ' x' + GetBit + ' ' + GetOSVersion;
   EditCPU.Caption := GetProcessorInfo;
   EditResolution.Caption := IntToStr(Screen.Width) + 'x' + IntToStr(Screen.Height);
 end;
